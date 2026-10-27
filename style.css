@@ -1,0 +1,209 @@
+/* 
+  Miracle Journal - style.css 
+  Nature & Vitality Theme (Forest Green Palette)
+*/
+
+
+:root {
+    /* Color Palette: Forest, Life Energy, Vitality */
+    --bg-color: #F4F9F4;          
+    --surface-color: #FFFFFF;     
+    --text-primary: #1E3F20;      
+    --text-secondary: #3B5A3D;    
+    --primary-brand: #2E7D32;     
+    --primary-hover: #1B5E20;     
+    --accent-color: #81C784;      
+    
+    /* Typography */
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    --base-line-height: 1.6;
+    
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --bg-color: #121F13;
+    --surface-color: #1B2E1D;
+    --text-primary: #E8F5E9;
+    --text-secondary: #A5D6A7;
+    --primary-brand: #4CAF50;
+    --primary-hover: #81C784;
+}
+
+/* Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: var(--base-line-height);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+h1, h2, h3, h4 { font-weight: 700; color: var(--text-primary); margin-bottom: var(--spacing-sm); }
+p { color: var(--text-secondary); margin-bottom: var(--spacing-sm); }
+a { text-decoration: none; color: var(--primary-brand); transition: color var(--transition-speed); }
+a:hover { color: var(--primary-hover); }
+
+/* Navigation */
+header {
+    background-color: var(--surface-color);
+    box-shadow: 0 2px 10px rgba(0, 40, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto; padding: 1rem var(--spacing-md);
+}
+
+.logo {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 1.5rem; font-weight: 800; color: var(--primary-brand);
+}
+.logo-img { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
+
+nav ul { display: flex; list-style: none; gap: var(--spacing-md); align-items: center;}
+nav ul li a { color: var(--text-primary); font-weight: 600; }
+nav ul li a:hover { color: var(--primary-brand); }
+
+.btn-dark-mode {
+    background: none; border: none; font-size: 1.5rem; cursor: pointer;
+    transition: transform var(--transition-speed);
+}
+.btn-dark-mode:hover { transform: scale(1.1); }
+
+/* Buttons */
+.btn-nav, .btn-cta {
+    display: inline-block; background-color: var(--primary-brand);
+    color: #FFFFFF; padding: 0.6rem 1.2rem; border-radius: 30px;
+    font-weight: 600; text-align: center;
+    transition: all var(--transition-speed) ease;
+}
+.btn-cta { padding: 1rem 2.5rem; font-size: 1.125rem; margin-top: var(--spacing-md); }
+.btn-nav:hover, .btn-cta:hover {
+    background-color: var(--primary-hover); transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+}
+
+/* Main & Sections */
+main { max-width: var(--container-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+section { padding: var(--spacing-lg) 0; }
+section h2 { font-size: 2.5rem; text-align: center; margin-bottom: var(--spacing-lg); }
+
+/* Hero Section */
+#hero {
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; padding: 4rem 0; gap: 2rem;
+}
+.hero-image-wrapper { width: 100%; border-radius: var(--border-radius); overflow: hidden; max-height: 400px;}
+.hero-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-content { max-width: 800px; margin-top: 1rem; }
+.hero-content h1 { font-size: 2.8rem; }
+
+/* About & Method */
+#about, #method { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.125rem;}
+
+/* Features */
+.features-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+.feature-card {
+    background-color: var(--surface-color); padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    text-align: center; transition: all var(--transition-speed);
+}
+.feature-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(46, 125, 50, 0.1); }
+.feature-icon {
+    width: 100px; height: 100px; margin: 0 auto 1.5rem;
+    border-radius: 50%; object-fit: cover; border: 3px solid var(--bg-color);
+}
+.feature-card h3 { font-size: 1.25rem; color: var(--primary-brand); }
+
+/* Interactive Demo & Calendar */
+#interactive-demo { text-align: center; }
+.demo-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md); margin-top: var(--spacing-md);
+}
+.demo-card {
+    background-color: var(--surface-color); padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+.demo-card h3 { font-size: 1.125rem; color: var(--primary-brand); margin-bottom: 0.5rem; }
+
+.calendar-hint { font-size: 0.85rem; color: var(--accent-color); margin-bottom: 1rem; }
+.calendar-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 1rem; color: var(--text-primary);
+}
+.calendar-header h4 { margin: 0; font-size: 1.1rem; }
+.calendar-header button {
+    background: none; border: none; color: var(--primary-brand);
+    cursor: pointer; font-size: 1.2rem; transition: transform var(--transition-speed);
+}
+.calendar-header button:hover { transform: scale(1.2); }
+
+.calendar-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day-header {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    padding-bottom: 5px;
+}
+
+.calendar-blank {
+    aspect-ratio: 1;
+}
+
+.calendar-day {
+    aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+    background-color: var(--bg-color); border-radius: 4px;
+    cursor: pointer; font-size: 0.9rem; font-weight: 600;
+    transition: all 0.2s ease; user-select: none;
+}
+.calendar-day:hover { background-color: var(--accent-color); color: #fff; transform: scale(1.05); }
+
+/* Energy Levels for Calendar */
+.energy-low { background-color: #A5D6A7; color: #1E3F20; border: 1px solid #81C784;}
+.energy-med { background-color: #4CAF50; color: #fff; }
+.energy-high { background-color: #1B5E20; color: #fff; }
+
+/* Footer */
+footer {
+    background-color: #112613; color: #FFFFFF;
+    padding: 3rem 0; margin-top: var(--spacing-lg);
+}
+.footer-content {
+    max-width: var(--container-width); margin: 0 auto;
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+.footer-links { display: flex; list-style: none; gap: 1.5rem; }
+.footer-links a { color: var(--accent-color); font-size: 0.9rem; }
+.footer-links a:hover { color: #FFFFFF; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav { flex-direction: column; gap: 1rem; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
+    .hero-content h1 { font-size: 2rem; }
+}

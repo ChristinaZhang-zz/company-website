@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Miracle Journal helps neurodivergent individuals and Highly Sensitive People track and optimize daily energy cycles.">
+    <title>Miracle Journal | Optimize Your Energy</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js for Interactive Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <div class="logo">
+                <img src="watermarked_img_4295948277928637353.jpg" alt="Miracle Journal Logo" class="logo-img">
+                Miracle Journal
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#interactive-demo">Demo</a></li>
+                <li><a href="#method">The Method</a></li>
+            </ul>
+            <button class="btn-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
+            <a href="https://www.miraclejournal.me" class="btn-nav">Start Freemium Tier</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-image-wrapper">
+                <img src="watermarked_img_2717679490903722062.jpg" alt="Vibrant green forest with sunlight" class="hero-img">
+            </div>
+            <div class="hero-content">
+                <h1>Track, analyze, and optimize your physiological and cognitive energy cycles throughout the day</h1>
+                <p>An innovative digital SaaS web application engineered for neurodivergent individuals—including those with ADHD and Autism Spectrum Conditions—and Highly Sensitive People (HSPs). Leverage algorithmic energy mapping to identify peak performance windows and predict energy troughs.</p>
+                <a href="https://www.miraclejournal.me" class="btn-cta">Access Web App</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Our Mission</h2>
+            <p>To empower neurodivergent and highly sensitive individuals worldwide by transforming unpredictable daily energy cycles into predictable, manageable pathways for personal and professional success through actionable web software and evidence-based educational frameworks.</p>
+        </section>
+
+        <section id="features">
+            <h2>Platform Core Modules</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <img src="watermarked_img_12162925774032170917.jpg" alt="Journal Symbol" class="feature-icon">
+                    <h3>Real-Time Energy Logger & Micro-Journal Engine</h3>
+                    <p>A daily multi-dimensional logging tool designed to take under three minutes to capture successes, gratitude, somatic body awareness, and a quantitative energy rating.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <img src="watermarked_img_11373169119906637332.jpg" alt="Brain Symbol" class="feature-icon">
+                    <h3>Smart Task Scheduler & Intervention Engine</h3>
+                    <p>An algorithmic engine that dynamically recommends task alignment based on real-time energy logs and predicted energy troughs.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <h3>Community Storyline & Privacy Controls</h3>
+                    <p>Keep your entries strictly private or publish them to a social feed to read peer entries, exchange micro-interventions, and foster peer support in a safe, moderated space.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Data Visualization & Energy Mapping Suite</h3>
+                    <p>Analyze energy patterns and swing dynamics across multiple time horizons using line and bar charts, integrated with two-way synchronization with Google Calendar.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="interactive-demo">
+            <h2>See Your Energy in Action</h2>
+            <p>Visualize your cognitive peaks and troughs to optimize your daily routine.</p>
+            
+            <div class="demo-grid">
+                <!-- Line Chart: Daily Energy Flow -->
+                <div class="demo-card">
+                    <h3>Daily Energy Flow</h3>
+                    <canvas id="energyLineChart"></canvas>
+                </div>
+
+                <!-- Bar Chart: Tag Impact -->
+                <div class="demo-card">
+                    <h3>Impact by Activity</h3>
+                    <canvas id="impactBarChart"></canvas>
+                </div>
+
+                <!-- Interactive Calendar -->
+                <div class="demo-card calendar-card">
+                    <h3>Interactive Energy Calendar</h3>
+                    <p class="calendar-hint">Click a day to log your energy!</p>
+                    <div class="calendar-header">
+                        <button id="prevMonth" aria-label="Previous Month">◀</button>
+                        <h4 id="monthYear">October 2026</h4>
+                        <button id="nextMonth" aria-label="Next Month">▶</button>
+                    </div>
+                    <div class="calendar-days-grid" id="calendarGrid">
+                        <!-- JS will populate weekdays and calendar days here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="method">
+            <h2>The 3-Minute Miracle Method</h2>
+            <p>Master the core philosophy of energy tracking, sensory management, and micro-journaling with our flagship instructional published book and workbook. The book serves as a standalone educational resource and a direct onboarding funnel to the web platform via bundled 30-day trial codes.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Miracle Journal. A Delaware C-Corporation. Hosted globally at www.miraclejournal.me.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">GDPR & CCPA Compliant</a></li>
+                <li><a href="#accessibility">ADA & WCAG 2.1 AA Compliant</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
